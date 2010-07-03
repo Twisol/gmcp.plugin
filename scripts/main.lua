@@ -66,8 +66,7 @@ function OnPluginTelnetRequest (opt, data)
   if data == "WILL" then
     return true
   elseif data == "SENT_DO" then
-    ColourNote("blue", "black", "attempting to enable GMCP\n")
-    ColourNote("white", "black", "\n")
+    ColourNote("blue", "black", "attempting to enable GMCP\n\n")
     
     SendGMCP("Core.Hello ", CLIENT_ID)
     SendGMCP("Core.Supports.Set ", GMCP_options)
